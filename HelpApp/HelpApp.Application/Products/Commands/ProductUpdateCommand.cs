@@ -1,5 +1,4 @@
-﻿
-namespace HelpApp.Application.Mapping.Products.Commands
+﻿namespace HelpApp.Application.Products.Commands
 {
     public class ProductUpdateCommand : ProductCommand
     {

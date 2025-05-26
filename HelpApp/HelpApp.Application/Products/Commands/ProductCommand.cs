@@ -1,7 +1,7 @@
 ﻿using HelpApp.Domain.Entities;
 using MediatR;
 
-namespace HelpApp.Application.Mapping.Products.Commands
+namespace HelpApp.Application.Products.Commands
 {
     public abstract class ProductCommand : IRequest<Product>
     {
