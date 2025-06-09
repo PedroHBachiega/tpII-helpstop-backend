@@ -6,7 +6,7 @@ namespace HelpApp.Domain.Account
     {
         Task<bool> Authenticate(string email, string password);
         Task<bool> Register(string email, string password);
-            
+        Task Logout();
      
         
     }
