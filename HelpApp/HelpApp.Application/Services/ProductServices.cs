@@ -6,22 +6,10 @@ using HelpApp.Domain.Entities;
 
 namespace HelpApp.Application.Services
 {
-    public class ProductServices : IProductRepository
+    public class ProductServices : IProductServices
     {
-        private IProductRepository _productRepository;
-        private readonly IMapper _mapper;
 
-        public ProductServices(IProductRepository productRepository, IMapper mapper)
-        {
-            _productRepository = productRepository;
-            _mapper = mapper;
-        }
 
-        public async Task<IEnumerable<Product>> GetProducts()
-        {
-            var productsEntity = await _productRepository.GetProducts();
-            return _mapper.Map<IEnumerable<Product>>(productsEntity);
-        }
 
         public Task<Product> GetById(int? id)
         {
@@ -39,6 +27,31 @@ namespace HelpApp.Application.Services
         }
 
         public Task<Product> Remove(Product product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<ProductDTO>> GetProducts()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ProductDTO> GetBtId(int? id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Add(ProductDTO productDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Update(ProductDTO productDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task Remove(int? id)
         {
             throw new NotImplementedException();
         }
